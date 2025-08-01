@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-test('Login and verify logo visibility', async ({ page }) => {
+test.only('Login and verify logo visibility', async ({ page }) => {
   //Navigatr to the login page
   await page.goto("https://www.saucedemo.com/v1/");
 
