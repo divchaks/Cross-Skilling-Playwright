@@ -1,15 +1,21 @@
 import { test, expect } from '@playwright/test';
 
-test('firsttest', async ({ page }) => {
+test('Login and verify logo visibility', async ({ page }) => {
+  //Navigatr to the login page
   await page.goto("https://www.saucedemo.com/v1/");
+
+  //Fill in the login credentials
   await page.locator('input[placeholder="Username"]').fill("standard_user");
   await page.locator('input[placeholder="Password"]').fill('secret_sauce');
-  await page.locator('input[type="submit"]').click();
-  //expect (page).toHaveTitle('Swag Labs'); // Check if the title contains "Swag Labs"
-  await page.locator('.app_logo').waitFor(); // Ensure the title is visible before checking
-  
 
-  const titleVisible = await page.locator('.app_logo').isVisible(); // Corrected method
+  //Submit the login form
+  await page.locator('input[type="submit"]').click();
+
+  //wait for the logo to be visible 
+  await page.locator('.app_logo').waitFor(); 
+  
+ //Verify that the logo is visisble 
+  const titleVisible = await page.locator('.app_logo').isVisible(); 
   console.log(titleVisible);
   expect(titleVisible).toBeTruthy();
 });
