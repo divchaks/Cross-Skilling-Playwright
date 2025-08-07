@@ -186,6 +186,132 @@ After running tests, Opens a full HTML report with test results, screenshots, an
 npx playwright show-report
 ```
 
+## Working with Git hub 
+Pushing Your Playwright Tests to GitHub  
+
+Once you have written your Playwright tests locally, you can push your code to GitHub so others can access or review it. Here’s a guide for pushing your code to a new GitHub repository:
+
+1. Create a New Repository on GitHub
+   
+Go to github.com
+
+Click New Repository
+
+Give it a name and description
+
+Choose Public or Private as needed
+
+Do not initialize with README, since you already have a local project
+
+2. Initialize Git in Your Local Project Folder
+   
+Open your terminal in the root folder of your Playwright project and run:
+
+```bash
+
+git init
+```
+This sets up Git tracking for your project.
+
+3. Add Files to Staging Area
+   
+Add all your files to the staging area (ready to commit):
+
+```bash
+
+git add .
+```
+4. Commit Your Changes
+   
+Commit your staged files with a meaningful message:
+
+```bash
+
+git commit -m "Add initial Playwright tests"
+```
+5. Link Your Local Repo to the Remote GitHub Repo
+
+Add the GitHub repository URL as the remote called origin:
+
+```bash
+
+git remote add origin https://github.com/divchaks/Cross-Skilling-Playwright.git
+```
+Replace the URL with your actual GitHub repo URL.
+
+6. Rename the Default Branch to main
+   
+Git may default to the branch name master, but GitHub prefers main. Rename it locally:
+
+```bash
+
+git branch -M main
+```
+7. Push Your Code to GitHub
+   
+Push your local code and set the upstream tracking branch:
+
+```bash
+
+git push -u origin main
+```
+
+### Best Practices for Working with Branches in Git
+When working on your Playwright tests—or any code—it’s important to follow good Git branching practices. This helps keep your codebase clean, avoids conflicts, and makes collaboration easier.
+
+ ##### Don’t work directly on the main branch
+The main branch should always represent stable, tested code that’s ready to be shared or deployed. Avoid making direct changes here to reduce risks of breaking the project or causing conflicts.
+##### Always create a new branch for your work
+Whenever you start a new feature, bug fix, or experiment, create a separate local branch. This keeps your work isolated and easy to manage.
+
+#### How to create and switch to a new branch:
+```bash
+
+git checkout -b feature/my-feature
+```
+Replace feature/my-feature with a meaningful branch name (e.g., bugfix/login-error or test/login-page)
+
+This creates the branch and switches you to it immediately
+
+* Work on your branch  
+* Add your changes  
+* Commit frequently with clear messages  
+* Push your branch to remote when ready
+
+```bash
+
+git add .
+git commit -m "Add login page tests"
+git push -u origin feature/my-feature
+
+```
+#### Merge your branch into main
+Once your work is done, tested, and reviewed, merge it back into the main branch.
+
+You can do this via:
+
+A Pull Request (PR) on GitHub or
+
+Locally using:
+
+```bash
+
+git checkout main
+git pull origin main       # Get latest main updates
+git merge feature/my-feature
+git push origin main
+```
+
+#### Delete your feature branch after merging (optional but recommended):
+```bash
+
+git branch -d feature/my-feature       # delete local branch
+git push origin --delete feature/my-feature  # delete remote branch
+```
+
+
+
+
 
 
 
