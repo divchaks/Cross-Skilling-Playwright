@@ -193,15 +193,11 @@ Once you have written your Playwright tests locally, you can push your code to G
 
 1. Create a New Repository on GitHub
    
-Go to github.com
-
-Click New Repository
-
-Give it a name and description
-
-Choose Public or Private as needed
-
-Do not initialize with README, since you already have a local project
+* Go to github.com
+* Click New Repository
+* Give it a name and description
+* Choose Public or Private as needed
+* Do not initialize with README, since you already have a local project
 
 2. Initialize Git in Your Local Project Folder
    
