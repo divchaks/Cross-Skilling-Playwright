@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 test('Login and verify logo visibility', async ({ page }) => {
-  //Navigatr to the login page
+  //Navigate to the login page
   await page.goto("https://www.saucedemo.com/v1/");
 
   //Fill in the login credentials
@@ -14,7 +14,7 @@ test('Login and verify logo visibility', async ({ page }) => {
   //wait for the logo to be visible 
   await page.locator('.app_logo').waitFor(); 
   
- //Verify that the logo is visisble 
+ //Verify that the logo is visible 
   const titleVisible = await page.locator('.app_logo').isVisible(); 
   console.log(titleVisible);
   expect(titleVisible).toBeTruthy();
