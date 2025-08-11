@@ -117,7 +117,7 @@ First, open your terminal and move into the folder where the cloned project live
 
 ```bash
 
-cd Documents/Playwright/your-playwright-repo
+cd Documents/Playwright/Cross_Skilling_Playwright
 ```
 Make sure you’re inside the root of the Playwright project where the package.json and playwright.config.ts files are located.
 
