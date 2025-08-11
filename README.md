@@ -50,8 +50,7 @@ Before you can run Playwright tests, you need to get a copy of the project on yo
 ### Create a Folder and Clone the Repository
 Before running any Playwright tests, you first need to clone the test project repository onto your local machine. Here’s how you can do that step-by-step.
 
- Step 1: Open Terminal / Command Line
-First, open a terminal or command prompt on your machine.
+ Step 1: open a terminal or command prompt on your machine.
 
 
 Step 2: Navigate to Your Preferred Directory  
@@ -95,7 +94,7 @@ git clone https://github.com/divchaks/Cross-Skilling-Playwright.git
 
 This will:
 
-Create a new folder named after your repo (e.g. your-playwright-repo)
+Create a new folder named after your repo (e.g. Cross_Skilling_Playwright)
 
 
 
@@ -105,7 +104,7 @@ Once cloned, change into the project directory like this:
 
 ```bash
 
-cd your-playwright-repo
+cd Cross_Skilling_Playwright
 ```
 You are now inside the Playwright test project directory and ready to set it up!
 
@@ -186,7 +185,7 @@ After running tests, Opens a full HTML report with test results, screenshots, an
 npx playwright show-report
 ```
 
-## Working with Git hub 
+## Working with Github 
 Pushing Your Playwright Tests to GitHub  
 
 Once you have written your Playwright tests locally, you can push your code to GitHub so others can access or review it. Here’s a guide for pushing your code to a new GitHub repository:
