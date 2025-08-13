@@ -11,11 +11,7 @@ test('Login and verify logo visibility', async ({ page }) => {
   //Submit the login form
   await page.locator('input[type="submit"]').click();
 
-  //wait for the logo to be visible 
-  await page.locator('.app_logo').waitFor(); 
-  
  //Verify that the logo is visible 
-  const titleVisible = await page.locator('.app_logo').isVisible(); 
-  console.log(titleVisible);
-  expect(titleVisible).toBeTruthy();
+  await expect (page.locator('.app_logo')).toBeVisible(); 
+  
 });
